@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.viggiemart.MainActivity"
+    >
+   <group android:id="@+id/group1">
+       <item android:id="@+id/history"
+           android:icon="@drawable/history_24px"
+           android:title="History"/>
+       <item android:id="@+id/lang"
+           android:icon="@drawable/language_24px"
+           android:title="Languange"/>
+       <item android:id="@+id/setting"
+           android:icon="@drawable/settings_24px"
+           android:title="Setting"/>
+   </group>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/logout_24px"
+        android:title="Logout"/>
+</menu>
