@@ -13,7 +13,7 @@ android {
         enable = true
     }
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "viggiesmart.appspot.com"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -52,7 +52,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("com.github.bumptech.glide:glide:4.15.0")
 
-
+    // Add these dependencies
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+    implementation ("com.google.android.material:material:1.9.0")
 //    implementation (libs.gson)
 //    implementation (libs.picasso)
 //    implementation (libs.retrofit)
@@ -61,5 +65,9 @@ dependencies {
 //    implementation (libs.design)
 //    implementation (libs.cardview.v7)
 //   implementation (libs.recyclerview.v7)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
+    // Material Design (if not already included)
+    implementation("com.google.android.material:material:1.11.0")
 }
