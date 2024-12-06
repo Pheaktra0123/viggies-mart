@@ -24,11 +24,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
-<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseAuth
-=======
 import kotlin.math.log
->>>>>>> refs/remotes/origin/master
+
 
 class MainActivityKotlin:AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
