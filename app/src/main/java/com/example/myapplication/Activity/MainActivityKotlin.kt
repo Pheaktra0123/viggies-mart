@@ -24,7 +24,11 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
+<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseAuth
+=======
+import kotlin.math.log
+>>>>>>> refs/remotes/origin/master
 
 class MainActivityKotlin:AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -89,7 +93,6 @@ class MainActivityKotlin:AppCompatActivity() {
 
         val database = Firebase.database
         val itemsRef = database.getReference("Product")
-
         itemsRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 itemList.clear()
