@@ -13,6 +13,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity android:name=".Activity.MainActivityKotlin"></activity>
+        <activity android:name=".Activity.ProductDatilActivity" />
         <activity
             android:name=".Activity.SplahScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"

@@ -95,14 +95,16 @@ class MainActivityKotlin:AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 itemList.clear()
                 for (itemSnapshot in snapshot.children) {
+                    Log.d("FirebaseData", "Snapshot: ${itemSnapshot.value}")
                     val item = itemSnapshot.getValue(Item::class.java)
                     if (item != null) {
                         itemList.add(item)
                     }
                 }
-                itemAdapter?.run { notifyDataSetChanged() }
+                itemAdapter?.notifyDataSetChanged()
                 showLoading(false)
             }
+
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e("MainActivity", "Database error: ${error.message}")
