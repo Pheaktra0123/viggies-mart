@@ -28,7 +28,7 @@ class ProductDatilActivity : AppCompatActivity() {
         // Set data to the views
         findViewById<TextView>(R.id.productName).text = product?.name
         findViewById<TextView>(R.id.productDescription).text = product?.description
-        findViewById<TextView>(R.id.productPrice).text = "$ ${product?.price?.toString()}"
+        findViewById<TextView>(R.id.productPrice).text = "$${product?.price?.toString()}/Kg"
 
         Glide.with(this).load(product?.image).into(findViewById(R.id.productImage))
     }

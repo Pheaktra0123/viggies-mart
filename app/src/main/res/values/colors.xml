@@ -2,6 +2,9 @@
 <resources>
     <color name="background_color">#03B92B</color>
     <color name="Seconary_btn">#e5e7eb</color>
+    <color name="Title">#065f46</color>
+    <color name="Body">#059669</color>
+    <color name="Seconary_bg">#86efac</color>
     <color name="background_icon">#99FBFBFB</color>
     <color name="text">#909090</color>
     <color name="text_color">#fff</color>
