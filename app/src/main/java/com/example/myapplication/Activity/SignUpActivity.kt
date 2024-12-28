@@ -3,6 +3,8 @@ package com.example.myapplication.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
@@ -22,10 +24,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_gf)
 
-        // Initialize Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
 
-        // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -33,9 +33,13 @@ class SignUpActivity : AppCompatActivity() {
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        // Set up click listener for Google sign-in button
         findViewById<Button>(R.id.google_button).setOnClickListener {
             signInWithGoogle()
+        }
+
+        findViewById<Button>(R.id.email_button).setOnClickListener {
+            val intent = Intent(this, EmailSignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 
