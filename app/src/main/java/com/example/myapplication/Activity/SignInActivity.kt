@@ -1,7 +1,9 @@
 package com.example.myapplication.Activity
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -17,6 +19,7 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var signInButton: Button
     private lateinit var forgotPasswordText: TextView
     private lateinit var signUpText: TextView
+    private lateinit var progressDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,60 +34,68 @@ class SignInActivity : AppCompatActivity() {
         signInButton = findViewById(R.id.sign_in_button)
         forgotPasswordText = findViewById(R.id.forgot_password)
         signUpText = findViewById(R.id.sign_up_text)
+        progressDialog = ProgressDialog(this)
 
         // Set up click listeners
-        signInButton.setOnClickListener {
-            signIn()
-        }
-
-        forgotPasswordText.setOnClickListener {
-            // Handle forgot password
-            val email = emailEditText.text.toString()
-            if (email.isNotEmpty()) {
-                auth.sendPasswordResetEmail(email)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(this, "Password reset email sent", Toast.LENGTH_SHORT).show()
-                        } else {
-                            Toast.makeText(this, "Failed to send reset email", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-            } else {
-                Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
-            }
-        }
-
+        signInButton.setOnClickListener { signIn() }
+        forgotPasswordText.setOnClickListener { sendPasswordReset() }
         signUpText.setOnClickListener {
-            // Navigate to SignUp activity
             startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 
     private fun signIn() {
-        val email = emailEditText.text.toString()
-        val password = passwordEditText.text.toString()
+        val email = emailEditText.text.toString().trim()
+        val password = passwordEditText.text.toString().trim()
 
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-            return
-        }
+        if (!validateInputs(email, password)) return
+
+        progressDialog.setMessage("Signing In...")
+        progressDialog.show()
 
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
+                progressDialog.dismiss()
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     startActivity(Intent(this, MainActivityKotlin::class.java))
                     finish()
                 } else {
-                    // If sign in fails, display a message to the user.
-                    Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, task.exception?.message ?: "Authentication failed", Toast.LENGTH_SHORT).show()
                 }
             }
     }
 
+    private fun sendPasswordReset() {
+        val email = emailEditText.text.toString().trim()
+        if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Enter a valid email", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Password reset email sent", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Failed to send reset email: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    private fun validateInputs(email: String, password: String): Boolean {
+        if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailEditText.error = "Enter a valid email"
+            return false
+        }
+        if (password.isEmpty() || password.length < 6) {
+            passwordEditText.error = "Password must be at least 6 characters"
+            return false
+        }
+        return true
+    }
+
     override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if (currentUser != null) {
             startActivity(Intent(this, MainActivityKotlin::class.java))
