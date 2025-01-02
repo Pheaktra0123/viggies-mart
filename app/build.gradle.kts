@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
-    id("kotlin-parcelize") // Kotlin Parcelize plugin
+    id("kotlin-parcelize")
 }
 
 android {
@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "viggiesmart.appspot.com"
+        applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -56,6 +56,7 @@ dependencies {
     // Firebase and Material Design dependencies
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation("com.google.firebase:firebase-auth")
+    implementation ("com.google.firebase:firebase-auth:22.1.1")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation("com.google.android.material:material:1.11.0")
 
