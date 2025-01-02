@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/image_3"
         android:layout_width="match_parent"
-        android:layout_height="412dp"
+        android:layout_height="490dp"
         android:layout_marginTop="-26dp"
         android:scaleType="centerCrop"
         android:src="@drawable/image_3"
@@ -24,7 +24,7 @@
         android:gravity="center"
         android:text="Hello!\nCreate Your Account"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/image_3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
     <LinearLayout
         android:id="@+id/signup_form"
         android:layout_width="match_parent"
-        android:layout_height="469dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="-120dp"
         android:orientation="vertical"
         android:padding="30dp"
@@ -50,73 +50,73 @@
             android:textAlignment="center"
             android:textSize="30sp"
             android:text="Sign Up"
-            android:textStyle="bold"></TextView>
-
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:backgroundTint="#03B92B"
-            android:textSize="18sp"
-            android:padding="15dp" />
+            android:paddingVertical="20dp"
+            android:textSize="24sp"
+            android:hint="Name" />
 
         <EditText
             android:id="@+id/input_email_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email/Phone"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="#03B92B"
-            android:textSize="18sp"
-            android:padding="15dp" />
+            android:textSize="24sp"
+            android:paddingVertical="20dp"
+            android:hint="Email or Phone" />
 
         <EditText
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:paddingVertical="20dp"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:backgroundTint="#03B92B"
-            android:textSize="18sp"
-            android:padding="15dp" />
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/input_confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="24sp"
             android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:backgroundTint="#03B92B"
-            android:textSize="18sp"
-            android:padding="15dp" />
+            android:paddingVertical="20dp"
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/checkbox_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I accept the policy and terms"
-            android:textColor="#03B92B"
-            android:textSize="14sp" />
+            android:paddingVertical="5dp"
+            android:textSize="18sp"
+            android:text="I accept the policy and terms" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
         <Button
         android:id="@+id/button_signup"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="#03B92B"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="Sign Up"
+            android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="5dp"
             android:text="Already have an account?Login here"
-            android:textSize="14sp"
             android:textColor="#03B92B"
-            android:textAlignment="center"
-            android:padding="5dp">
-        </TextView>
+            android:textSize="18sp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
