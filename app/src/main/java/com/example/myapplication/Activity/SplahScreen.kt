@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.WindowManager
 import android.view.WindowManager.LayoutParams.*
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -16,17 +17,15 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        // Make the activity full screen
         window.setFlags(
-            FLAG_FULLSCREEN,
-            FLAG_FULLSCREEN
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        // Delay for 3 seconds and decide navigation
         Handler(Looper.getMainLooper()).postDelayed({
             val firebaseAuth = FirebaseAuth.getInstance()
             val nextActivity = if (firebaseAuth.currentUser != null) {
-                MainActivityKotlin::class.java // Correct reference
+                MainActivityKotlin::class.java
             } else {
                 GetStartedActivity::class.java
             }
@@ -34,9 +33,10 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, nextActivity)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 3000) // 3 seconds delay for the splash screen
     }
 }
+
 
 class GetStartedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

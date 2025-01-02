@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -43,6 +44,12 @@ class MainActivityKotlin:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // Retrieve the user's name from the Intent
+        val userName = intent.getStringExtra("USER_NAME")
+
+        // Display the name in the TextView
+        val getNameTextView = findViewById<TextView>(R.id.getName)
+        getNameTextView.text = userName ?: "User"
         //for slide bar
         drawerLayout = findViewById(R.id.drawerlayout)
         buttonDrawer = findViewById(R.id.btndrawer)

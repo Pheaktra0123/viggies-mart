@@ -34,9 +34,7 @@
             android:exported="true" />
 
         <!-- Other Activities -->
-        <activity android:name=".Activity.SignUpActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.example.signup.SignUpActivity"/>
         <activity android:name=".Activity.SignInActivity"
             android:exported="true"/>
         <activity android:name=".Activity.MainActivityKotlin" />
