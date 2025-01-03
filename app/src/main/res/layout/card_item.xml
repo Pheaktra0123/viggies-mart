@@ -38,6 +38,8 @@
             android:textAlignment="viewStart"
             android:padding="10dp"
             android:text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            android:ellipsize="end"
+            android:maxLines="2"
             tools:ignore="HardcodedText,SmallSp" />
         <LinearLayout
             android:orientation="horizontal"

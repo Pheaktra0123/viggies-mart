@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03B92B"
+    tools:context=".MainActivity">
+
+    <!-- Greeting Text -->
+
+    <ImageView
+        android:id="@+id/image_6"
+        android:layout_width="390dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Veggies"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/greetingText"
+        android:layout_width="296dp"
+        android:layout_height="40dp"
+        android:layout_margin="0dp"
+        android:text="Greetings from ViggieMart!"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_6" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="296dp"
+        android:layout_height="88dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="ViggieMart offers practicality and wellness solutions, assisting in finding fresh produce, meal planning, and discovering new, healthy options for your health and mind."
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greetingText" />
+
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Get Started"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionText" />
+
+    <TextView
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Already have an account? Login here"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getStartedButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

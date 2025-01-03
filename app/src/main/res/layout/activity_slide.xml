@@ -35,14 +35,27 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/welcome"
-                    android:textColor="@color/text_color"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Hello!"
+                       android:textColor="@color/text_color"
+                       android:textSize="20sp"
+                       android:textStyle="bold" />
+                   <TextView
+                       android:id="@+id/getName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/text_color"
+                       android:textSize="20sp"
+                       android:text="PheakTra"
+                       android:textStyle="bold" />
+               </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -102,12 +115,13 @@
 
             <EditText
                 android:id="@+id/searchView"
-                android:layout_width="300dp"
+                android:layout_width="280dp"
                 android:layout_height="50dp"
                 android:autofillHints="Find Products"
                 android:background="@drawable/rounded_bg_icon"
                 android:hint="@string/find_product"
                 android:paddingStart="20dp"
+                android:layout_marginHorizontal="5dp"
                 android:textColor="@color/background_icon"
                 tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
 

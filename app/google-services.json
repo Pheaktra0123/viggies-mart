@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "143851957173",
+    "firebase_url": "https://viggiesmart-default-rtdb.firebaseio.com",
     "project_id": "viggiesmart",
     "storage_bucket": "viggiesmart.appspot.com"
   },
@@ -10,6 +11,44 @@
         "mobilesdk_app_id": "1:143851957173:android:f40d9cad686f10614e87fc",
         "android_client_info": {
           "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6d00Q3EMH7t5fIX-mZefCxYb83wIbtZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143851957173:android:ba72a57eccce20f84e87fc",
+        "android_client_info": {
+          "package_name": "com.example.viggiemart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6d00Q3EMH7t5fIX-mZefCxYb83wIbtZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143851957173:android:52c5ffb404f176ae4e87fc",
+        "android_client_info": {
+          "package_name": "viggiesmart.appspot.com"
         }
       },
       "oauth_client": [],
