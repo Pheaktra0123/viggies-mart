@@ -1,26 +1,95 @@
 {
   "project_info": {
-    "project_number": "702578915316",
-    "project_id": "test-signin-4474f",
-    "storage_bucket": "test-signin-4474f.firebasestorage.app"
+    "project_number": "143851957173",
+    "firebase_url": "https://viggiesmart-default-rtdb.firebaseio.com",
+    "project_id": "viggiesmart",
+    "storage_bucket": "viggiesmart.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:702578915316:android:1d728241f7d9111f2d2ba1",
+        "mobilesdk_app_id": "1:143851957173:android:f40d9cad686f10614e87fc",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCI-vp8kwd23pjlu02hdo2EK8IBSSumtNM"
+          "current_key": "AIzaSyB6d00Q3EMH7t5fIX-mZefCxYb83wIbtZw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143851957173:android:ba72a57eccce20f84e87fc",
+        "android_client_info": {
+          "package_name": "com.example.viggiemart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6d00Q3EMH7t5fIX-mZefCxYb83wIbtZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143851957173:android:52c5ffb404f176ae4e87fc",
+        "android_client_info": {
+          "package_name": "viggiesmart.appspot.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6d00Q3EMH7t5fIX-mZefCxYb83wIbtZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143851957173-6ndgrp32bq61dej65ahprj81s4dd3db1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -56,9 +56,6 @@ dependencies {
     // Firebase and Material Design dependencies
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation("com.google.firebase:firebase-auth")
-    implementation ("com.google.firebase:firebase-auth:22.1.1")
-    implementation ("androidx.appcompat:appcompat:1.6.1'")
-
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation("com.google.android.material:material:1.11.0")
 
