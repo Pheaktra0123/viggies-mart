@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 // Intent to navigate to Sign-in activity
                 val intent = Intent(this, SignInActivity::class.java)
                 startActivity(intent)
-                finish() // Optional: Close the current activity
+                finish()
                 true
             }
             else -> super.onOptionsItemSelected(item)

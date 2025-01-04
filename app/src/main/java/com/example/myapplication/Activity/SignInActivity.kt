@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.example.signup.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.FirebaseApp
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -25,6 +26,8 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        FirebaseApp.initializeApp(this)
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -50,14 +53,15 @@ class SignInActivity : AppCompatActivity() {
         val password = passwordEditText.text.toString().trim()
 
         if (!validateInputs(email, password)) return
-
         progressDialog.setMessage("Signing In...")
         progressDialog.show()
-
+        println("passed");
+        val auth = FirebaseAuth.getInstance()
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 progressDialog.dismiss()
                 if (task.isSuccessful) {
+                    println("success")
                     startActivity(Intent(this, MainActivityKotlin::class.java))
                     finish()
                 } else {
