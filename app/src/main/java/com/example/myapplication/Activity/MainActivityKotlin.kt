@@ -18,6 +18,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Adapter.ItemAdapter
+import com.example.myapplication.Fragement.History
+import com.example.myapplication.Fragement.Language
+import com.example.myapplication.Fragement.Setting
 import com.example.myapplication.Model.Item
 import com.example.myapplication.R
 import com.google.firebase.Firebase
@@ -81,6 +84,21 @@ class MainActivityKotlin:AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.history -> {
+                    val intent=Intent(this,History::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.lang -> {
+                    val intent = Intent(this, Language::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.setting -> {
+                    val intent = Intent(this, Setting::class.java)
+                    startActivity(intent)
+                    true
+                }
                 R.id.logout -> {
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(this, SignInActivity::class.java)
