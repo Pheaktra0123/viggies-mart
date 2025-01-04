@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.signup.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.FirebaseApp
 
