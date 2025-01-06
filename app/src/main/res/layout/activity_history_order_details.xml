@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="29dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Order Details"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_pickup_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pick Up\nOrder Status\nDate and time\nStore\nYour number is"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_details_title" />
+
+    <TextView
+        android:id="@+id/order_info_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="Order Completed\n2024-Oct-14/16:26:PM\nVeggieMart\n107"
+        android:textAlignment="viewStart"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/order_pickup_label"
+        app:layout_constraintTop_toTopOf="@id/order_pickup_label" />
+
+    <TextView
+        android:id="@+id/order_details_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Details"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_info_values" />
+
+    <!-- Table Headers -->
+    <TextView
+        android:id="@+id/items_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Items"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_details_subtitle"
+        android:layout_marginTop="16dp" />
+
+    <!-- Order Item Row -->
+    <ImageView
+        android:id="@+id/line_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:src="@drawable/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/items_header"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/qty_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:text="Qty"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/items_header"
+        app:layout_constraintTop_toTopOf="@id/items_header" />
+
+    <TextView
+        android:id="@+id/amount_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:text="Amount"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/qty_header"
+        app:layout_constraintTop_toTopOf="@id/items_header" />
+
+    <TextView
+        android:id="@+id/order_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red chilli"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_separator"
+        android:layout_marginTop="8dp" />
+
+    <!-- Subtotal, Delivery Fee, and Total -->
+    <TextView
+        android:id="@+id/order_item_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:text="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/order_item_name"
+        app:layout_constraintTop_toTopOf="@id/order_item_name" />
+
+    <TextView
+        android:id="@+id/order_item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:text="$10.00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/order_item_qty"
+        app:layout_constraintTop_toTopOf="@id/order_item_name" />
+
+    <TextView
+        android:id="@+id/subtotal_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:text="Sub Total"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_item_name" />
+
+    <TextView
+        android:id="@+id/subtotal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:text="$10.00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/subtotal_label"
+        app:layout_constraintTop_toTopOf="@id/subtotal_label" />
+
+    <TextView
+        android:id="@+id/delivery_fee_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Fee"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtotal_label"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/delivery_fee_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="264dp"
+        android:text="$0.00"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/delivery_fee_label"
+        app:layout_constraintTop_toTopOf="@id/delivery_fee_label" />
+
+    <TextView
+        android:id="@+id/total_amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_fee_label"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/total_amount_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:text="$10.00"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/total_amount_label"
+        app:layout_constraintTop_toTopOf="@id/total_amount_label" />
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Pay with"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_amount_label" />
+
+    <ImageView
+        android:id="@+id/payment_icon"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/payment_cash"
+        app:layout_constraintStart_toEndOf="@id/payment"
+        app:layout_constraintTop_toBottomOf="@id/total_amount_value" />
+<!--    android:src="@drawable/payment_cash"-->
+
+
+    <Button
+        android:id="@+id/reorder_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Re-order"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payment_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

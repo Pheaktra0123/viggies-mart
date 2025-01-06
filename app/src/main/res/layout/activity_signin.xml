@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
            android:backgroundTint="#03B92B"
             android:padding="18dp"
-            android:text="Sign Up"
+            android:text="Sign In"
             android:layout_marginTop="20dp"
             android:textColor="@android:color/white"
             android:textSize="20sp" />

@@ -1,21 +1,40 @@
 {
   "project_info": {
-    "project_number": "702578915316",
-    "project_id": "test-signin-4474f",
-    "storage_bucket": "test-signin-4474f.firebasestorage.app"
+    "project_number": "872281601521",
+    "project_id": "viggiemart-e-commerce",
+    "storage_bucket": "viggiemart-e-commerce.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:702578915316:android:1d728241f7d9111f2d2ba1",
+        "mobilesdk_app_id": "1:872281601521:android:0e19a42adbccaceba18050",
         "android_client_info": {
-          "package_name": "com.example.myapplication"
+          "package_name": "com.example.viggiemart"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCI-vp8kwd23pjlu02hdo2EK8IBSSumtNM"
+          "current_key": "AIzaSyDu_IcqNz2OBunSDSdaPNW85HgcI91HPFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872281601521:android:3b9e74fa7be9a57aa18050",
+        "android_client_info": {
+          "package_name": "viggiesmart.appspot.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu_IcqNz2OBunSDSdaPNW85HgcI91HPFQ"
         }
       ],
       "services": {
