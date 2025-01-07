@@ -18,9 +18,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Adapter.ItemAdapter
-import com.example.myapplication.Fragement.History
-import com.example.myapplication.Fragement.Language
-import com.example.myapplication.Fragement.Setting
 import com.example.myapplication.Model.Item
 import com.example.myapplication.R
 import com.google.firebase.Firebase
@@ -48,11 +45,14 @@ class MainActivityKotlin:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // Retrieve the user's name from the Intent
-        val userName = intent.getStringExtra("USER_NAME")
+        val userName = intent.getStringExtra("USER_NAME") ?: "User"
 
-        // Display the name in the TextView
-        val getNameTextView = findViewById<TextView>(R.id.getName)
-        getNameTextView.text = userName ?: "User"
+        // Find and set the name for both TextViews
+        val getNameTop = findViewById<TextView>(R.id.getNameTop)
+        val getNameBottom = findViewById<TextView>(R.id.getNameBottom)
+
+        getNameTop?.text = userName
+        getNameBottom?.text = userName
         //for slide bar
         drawerLayout = findViewById(R.id.drawerlayout)
         buttonDrawer = findViewById(R.id.btndrawer)
@@ -60,8 +60,13 @@ class MainActivityKotlin:AppCompatActivity() {
         buttonDrawer.setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
         }
-
-
+        //click view button card
+        val cardButton: ImageButton=findViewById(R.id.card)
+        cardButton.setOnClickListener {
+            // Navigate to the View Card Activity
+            val intent = Intent(this, View_Card::class.java)
+            startActivity(intent)
+        }
         //progress bar
         progressBar=findViewById(R.id.progressBar)
         Handler(Looper.getMainLooper()).postDelayed({
@@ -85,20 +90,20 @@ class MainActivityKotlin:AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.history -> {
-                    val intent=Intent(this,History::class.java)
+                    val intent=Intent(this,HistoryActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                R.id.lang -> {
-                    val intent = Intent(this, Language::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.setting -> {
-                    val intent = Intent(this, Setting::class.java)
-                    startActivity(intent)
-                    true
-                }
+//                R.id.lang -> {
+//                    val intent = Intent(this, Language::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+//                R.id.setting -> {
+//                    val intent = Intent(this, Setting::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
                 R.id.logout -> {
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(this, SignInActivity::class.java)
