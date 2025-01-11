@@ -48,7 +48,7 @@
                        android:textSize="20sp"
                        android:textStyle="bold" />
                    <TextView
-                       android:id="@+id/getName"
+                       android:id="@+id/getNameTop"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textColor="@color/text_color"
@@ -86,6 +86,7 @@
                 tools:ignore="RtlHardcoded">
 
                 <ImageButton
+                    android:id="@+id/card"
                     android:layout_width="50dp"
                     android:background="@drawable/rounded_bg_icon"
                     android:layout_height="50dp"
