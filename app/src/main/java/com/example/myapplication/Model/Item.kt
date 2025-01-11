@@ -8,7 +8,8 @@ data class Item(
     val name: String? = null,
     val description: String? = null,
     val price: Long? = null, // Change type to Long
-    val image: String? = null
+    val image: String? = null,
+    var quantity: Int = 0
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),

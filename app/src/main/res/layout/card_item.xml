@@ -58,11 +58,11 @@
                 android:text="2$/KG"
                 tools:ignore="HardcodedText,SmallSp" />
             <ImageButton
+                android:id="@+id/add_to_cart_button"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/round_card"
                 android:contentDescription="@string/todo1"
-                android:id="@+id/btndrawer"
                 android:src="@drawable/shopping_bag_24px" />
         </LinearLayout>
     </LinearLayout>
