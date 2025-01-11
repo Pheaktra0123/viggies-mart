@@ -23,9 +23,6 @@
     <string name="todo6">TODO</string>
     <string name="todo7">TODO</string>
     <string name="productitem">Product1</string>
-<<<<<<< HEAD
     <string name="back_button" />
-=======
-    <string name="default_web_client_id">577167748924-6o2pcsinui2oaltr4m4hav7ipsat56u0.apps.googleusercontent.com</string>
->>>>>>> f2ee3a3436ab1db5a4d83e7fc9087b45b7417fba
+    <string name="default_web_client_id"/>
 </resources>

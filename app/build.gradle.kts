@@ -47,11 +47,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.database)
-<<<<<<< HEAD
     implementation(libs.androidx.recyclerview)
-=======
     implementation(libs.firebase.auth.ktx)
->>>>>>> f2ee3a3436ab1db5a4d83e7fc9087b45b7417fba
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
