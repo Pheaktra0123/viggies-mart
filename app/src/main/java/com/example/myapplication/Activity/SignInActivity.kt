@@ -61,13 +61,14 @@ class SignInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 progressDialog.dismiss()
                 if (task.isSuccessful) {
-                    println("success")
                     startActivity(Intent(this, MainActivityKotlin::class.java))
                     finish()
                 } else {
+                    println("Error: ${task.exception}")
                     Toast.makeText(this, task.exception?.message ?: "Authentication failed", Toast.LENGTH_SHORT).show()
                 }
             }
+
     }
 
     private fun sendPasswordReset() {

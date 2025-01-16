@@ -67,6 +67,7 @@ class MainActivityKotlin:AppCompatActivity() {
             val intent = Intent(this, View_Card::class.java)
             startActivity(intent)
         }
+
         //progress bar
         progressBar=findViewById(R.id.progressBar)
         Handler(Looper.getMainLooper()).postDelayed({

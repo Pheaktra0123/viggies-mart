@@ -2,6 +2,7 @@ package com.example.myapplication.Activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,10 +23,12 @@ class View_Card : AppCompatActivity() {
         setContentView(R.layout.view_card)
 
         // Initialize cart items
+        Log.d("CartManager", "Cart Items: ${CartManager.getCartItems()}")
+
         cartItems = CartManager.getCartItems() ?: emptyList()
 
         // Set up RecyclerView
-        recyclerView = findViewById(R.id.recycle_view)
+        recyclerView = findViewById(R.id.recycle_checkout_item)
         cartAdapter = ItemAdapter(this, cartItems)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = cartAdapter
@@ -35,4 +38,6 @@ class View_Card : AppCompatActivity() {
             finish() // Close the activity and return to MainActivity
         }
     }
+
+
 }

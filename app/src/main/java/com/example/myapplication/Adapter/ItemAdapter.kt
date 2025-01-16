@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.Activity.MainActivityKotlin
 import com.example.myapplication.Activity.ProductDatilActivity
+import com.example.myapplication.Activity.View_Card
 import com.example.myapplication.Model.Item
 import com.example.myapplication.R
 class ItemAdapter(
@@ -51,6 +52,7 @@ class ItemAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false)
+
         return ViewHolder(view)
     }
 
